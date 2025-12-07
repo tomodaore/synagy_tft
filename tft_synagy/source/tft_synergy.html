@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TFT シナジー選択</title>
+  <style>
+    .checkbox-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 3列に分割 */
+      gap: 10px; /* 各要素の間隔 */
+    }
+    .checkbox-container label {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/cgi-bin/main.cgi" method="POST">
+    <p>使用したいシナジーを選んでください：</p>
+    <div class="checkbox-container">
+      <label><input type="checkbox" name="synergy" value="Anima Squad">アニマ部隊</label>
+      <label><input type="checkbox" name="synergy" value="BoomBots">ブームボット</label>
+      <label><input type="checkbox" name="synergy" value="Cyberboss">サイバーボス</label>
+      <label><input type="checkbox" name="synergy" value="Cypher">サイファー</label>
+      <label><input type="checkbox" name="synergy" value="Divinicorp">ディヴィ二コープ</label>
+      <label><input type="checkbox" name="synergy" value="Exotech">エクゾテック</label>
+      <label><input type="checkbox" name="synergy" value="God of the Net">ネットの神</label>
+      <label><input type="checkbox" name="synergy" value="Golden Ox">ゴールデンOx</label>
+      <label><input type="checkbox" name="synergy" value="Nitro">ニトロ</label>
+      <label><input type="checkbox" name="synergy" value="Overlord">オーバーロード</label>
+      <label><input type="checkbox" name="synergy" value="Soul Killer">ソウルキラー</label>
+      <label><input type="checkbox" name="synergy" value="Street Demon">ストリート デーモン</label>
+      <label><input type="checkbox" name="synergy" value="Syndicate">シンジケート</label>
+      <label><input type="checkbox" name="synergy" value="Virus">ウイルス</label>
+      <label><input type="checkbox" name="synergy" value="A.M.P.">A.M.P.</label>
+      <label><input type="checkbox" name="synergy" value="Bastion">バスティオン</label>
+      <label><input type="checkbox" name="synergy" value="Bruiser">ブルーザー</label>
+      <label><input type="checkbox" name="synergy" value="Dynamo">ダイナモ</label>
+      <label><input type="checkbox" name="synergy" value="Executioner">エクセキューショナー</label>
+      <label><input type="checkbox" name="synergy" value="Marksman">マークスマン</label>
+      <label><input type="checkbox" name="synergy" value="Rapidfire">ラピッドファイア</label>
+      <label><input type="checkbox" name="synergy" value="Slayer">スレイヤー</label>
+      <label><input type="checkbox" name="synergy" value="Strategist">ストラテジスト</label>
+      <label><input type="checkbox" name="synergy" value="Techie">テッキー</label>
+      <label><input type="checkbox" name="synergy" value="Vanguard">ヴァンガード</label>
+    </div>
+    <p>何コスト以下のチャンプ：</p>
+    <select name="cost">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <input type="submit" value="送信">
+  </form>
+</body>
+</html>
